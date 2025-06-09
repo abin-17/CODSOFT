@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abinaya S | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Abinaya S</div>
+    <nav class="navbar">
+      <a href="#" data-target="home">Home</a>
+      <a href="#" data-target="about">About</a>
+      <a href="#" data-target="skills">Skills</a>
+      <a href="#" data-target="projects">Projects</a>
+      <a href="#" data-target="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section active">
+      <div class="home-container">
+        <img src="https://cdn.myanimelist.net/images/characters/4/411738.jpg" alt="Profile" class="profile-img" />
+        <div class="typing-container">
+          <h1>Hello, I'm <span>Abinaya S</span></h1>
+          <p class="typing-text">Web Developer | Frontend Enthusiast</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I’m Abinaya, a passionate web developer focused on building websites and apps that are simple, effective, and user-friendly. I use HTML, CSS, JavaScript, and React to bring ideas to life, always aiming to write clean, easy-to-understand code. I’m interested in UI/UX design and cloud technologies, and I enjoy learning new tools that help me improve my work. My goal is to create projects that solve real problems and make people’s lives easier. I like working on full-stack applications and always try to keep learning and growing as a developer.</p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <table class="skills-table">
+        <tr>
+          <th>Languages</th>
+          <th>Skills</th>
+          <th>Technologies</th>
+          <th>Tools</th>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>Problem Solving</td>
+          <td>React.js</td>
+          <td>Eclipse</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>DSA</td>
+          <td>Spring Boot</td>
+          <td>VS Code</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Frontend Dev</td>
+          <td>MySQL/DBMS</td>
+          <td>Figma</td>
+        </tr>
+        <tr>
+          <td>Java</td>
+          <td></td>
+          <td>Cloud Mgmt</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </section>
+
+   <section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Showcasing my skills and projects, built with HTML, CSS, and JS.</p>
+    </div>
+    <div class="project-card">
+      <h3>Calculator App</h3>
+      <p>Simple calculator using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project-card">
+      <h3>Landing Page</h3>
+      <p>Creative landing page for a fictional product.</p>
+    </div>
+  </div>
+</section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:abinaya1752006@gmail.com">abinaya1752006@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/abinaya">linkedin.com/in/abinaya</a></p>
+      <p>GitHub: <a href="https://github.com/abinaya">github.com/abinaya</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Abinaya S. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.navbar a');
+    const sections = document.querySelectorAll('.section');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('data-target');
+
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
